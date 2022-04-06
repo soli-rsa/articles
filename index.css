@@ -12,10 +12,11 @@
 html, body {
     background-color: var(--oxford-blue);
     color: var(--platinum);
+    word-wrap: break-word;
 }
 
 #app {
-    width: 100vw,
+    width: 100vw;
     height: 100%;
     font-family: var(--font-1);
 }
@@ -23,23 +24,23 @@ html, body {
 /* 
     MAIN SECTION
 */
-main {
+#app main {
     color: var(--black);
     font-family: var(--font-2);
     font-size: 1.25em;
 }
 
-main p {
+#app main p {
     font-family:'Cascadia Mono', Courier, monospace;
     font-size: 1.25em;
 }
 
-main a:hover {
+#app main a:hover {
     color: var(--orange-web);
 }
 
 
-main h1:hover {
+#app main h1:hover {
     color: var(--orange-web);
     
 }
@@ -49,11 +50,11 @@ a:hover {
     font: 'Cascadia Mono', Courier, monospace;;
 }
 
-article {
+#app main article {
     background-color: var(--oxford-blue);
     stroke: var(--oxford-blue);
 }
 
-article header {
+#app main article header {
     color: var(--platinum);
 }
