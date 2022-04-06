@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='strylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css' integrity='sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==' crossorigin='anonymous'/>
+    <!--  -->
+    <script type="module" src="./index.js"></script>
+</head>
+<body>
+    <!--  -->
+    <template id="header-template">
+        <header class="container">
+            <h1 class="display-1">{{headline()}}</h1>
+            <h1>{{description}}</h1>
+        </header>
+    </template>
+    <!--  -->
+    <template id="main-template">
+        <main class="container">
+            <section class=""></section>
+        </main>
+    </template>
+    <!--  -->
+    <template id="footer-template">
+        <footer class="card-footer p-5">
+            <small>{{message}}</small>
+        </footer>
+    </template>
+
+    <div id="app" class="mt-4">
+        <div v-scope="Header({ 
+            
+        })"></div>
+        <div v-scope="Main({})"></div>
+        <div v-scope="Footer()"></div>
+    </div>
+</body>
+</html>
