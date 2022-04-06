@@ -4,37 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel='strylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css' integrity='sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==' crossorigin='anonymous'/>
+    <title>Blog | Soli Tsaagane</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./index.css">
     <!--  -->
     <script type="module" src="./index.js"></script>
 </head>
 <body>
-    <!--  -->
+    <!-- tem:start -->
     <template id="header-template">
-        <header class="container">
-            <h1 class="display-1">{{headline()}}</h1>
-            <h1>{{description}}</h1>
+        <header class="nav bg-black">
+            <nav class="navbar p-3">
+                <a href="#" class="navbar-brand">$oli<span class="text-info">:</span></a>
+                <a href="#audio" class="nav-item">./javascript</a>
+                <a href="#" class="nav-item">/webdev</a>
+                <a href="#" class="nav-item">/connect</a>
+            </nav>
+            <div class="row container p-5">
+                <h1 class="display-1 text-center">{{headline()}}</h1>
+                <p class="text-info m-1 p-2 text-center">{{description}}</p>
+            </div>
         </header>
     </template>
-    <!--  -->
+
     <template id="main-template">
         <main class="container">
-            <section class=""></section>
+            <article class="card my-2 m">
+                <header class="card-header bg-black">
+                    <h1 class="card-title">{{components.Article.headline}}</h1>
+                    <hr>
+                    <small class="fst-italic">Published: {{components.Article.datePublished }}</small>
+                </header>
+                <section class="card-body bg-primary">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit aperiam, magnam voluptatibus qui exercitationem in doloribus est ducimus quisquam quas!</p>
+                </section>
+            </article>
         </main>
     </template>
-    <!--  -->
+
     <template id="footer-template">
-        <footer class="card-footer p-5">
+        <footer class="card-footer p-4">
+            <h2>Connect</h2>
+            <nav v-for="link in components.Article.author.sameAs" class="list-group">
+                <a :href="link" class="text-decoration-none">🔗:{{link}}</a>
+            </nav>
+            <br>
             <small>{{message}}</small>
+            <br>
+            <small>💓 Made in <a :href="wikiLink">South Africa</a> with love</small>
         </footer>
     </template>
+    <!-- tem:end -->
 
-    <div id="app" class="mt-4">
-        <div v-scope="Header({ 
-            
-        })"></div>
-        <div v-scope="Main({})"></div>
+    <!-- Application -->
+    <div id="app">
+        <div v-scope="Header()"></div>
+        <div v-scope="Main()"></div>
         <div v-scope="Footer()"></div>
     </div>
 </body>

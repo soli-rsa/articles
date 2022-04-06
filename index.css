@@ -1,0 +1,58 @@
+:root {
+    /* CSS HSL */
+    --black: hsla(0, 0%, 0%, 1);
+    --oxford-blue: hsla(221, 51%, 16%, 1);
+    --orange-web: hsla(37, 98%, 53%, 1);
+    --platinum: hsla(0, 0%, 90%, 1);
+    --white: hsla(0, 0%, 100%, 1);
+    --font-1 : 'Cascadia Code', Courier, monospace;
+    --font-2 : 'Cascadia Mono', Courier, monospace;
+}
+
+html, body {
+    background-color: var(--oxford-blue);
+    color: var(--platinum);
+}
+
+#app {
+    height: 100%;
+    font-family: var(--font-1);
+}
+
+/* 
+    MAIN SECTION
+*/
+main {
+    color: var(--black);
+    font-family: var(--font-2);
+    font-size: 1.25em;
+}
+
+main p {
+    font-family:'Cascadia Mono', Courier, monospace;
+    font-size: 1.25em;
+}
+
+main a:hover {
+    color: var(--orange-web);
+}
+
+
+main h1:hover {
+    color: var(--orange-web);
+    
+}
+
+a:hover {
+    color: var(--white);
+    font: 'Cascadia Mono', Courier, monospace;;
+}
+
+article {
+    background-color: var(--oxford-blue);
+    stroke: var(--oxford-blue);
+}
+
+article header {
+    color: var(--platinum);
+}
